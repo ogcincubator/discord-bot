@@ -13,6 +13,14 @@ First install the requirements, with:
 pip install -r requirements.txt
 ```
 
+Then create an environment variable for your BOT token with:
+
+```
+EXPORT BOT=[REPLACE THIS WITH YOUR DISCORD BOT TOKEN]
+```
+
+Choose your script, and run it.
+
 ### bot.py
 
 Run:
@@ -25,6 +33,17 @@ On #staff-chat, check-in users with:
 ```
 !assignrole "joana9321" "Attendee"
 ```
+
+### bulk-assign.py
+
+Create a csv list of discord usernames that you want to check-in: [usernames.csv](./usernames.csv)
+
+Run:
+```
+python bulk-assign.py
+```
+
+Users will be assign the `Attendee` role, if they don't have it already. Then they will receive a DM stating they have been checked-in.
 
 ## License
 
